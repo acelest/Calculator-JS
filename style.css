@@ -16,9 +16,12 @@ body {
 }
 
 .calculatrice {
-  background-color: tomato;
+  background-color: rgb(69, 5, 5);
   display: flex;
   flex-direction: column;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgb(249, 3, 3);
 }
 
 .ecran {
@@ -39,4 +42,39 @@ body {
   grid-template-columns: repeat(4, 50px);
   grid-template-rows: repeat(5, 50px);
   grid-gap: 2px;
+}
+
+html {
+  background-image: linear-gradient(
+    to top,
+    rgba(9, 168, 165, 0.267) 0%,
+    #61d20b 100%
+  );
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px #002eb6;
+  font-size: 18px;
+}
+button:active {
+  box-shadow: 0 1px #f8f8f8;
+  transform: translateY(2px);
+}
+
+button[data-key="8"] {
+  background-color: #d9a90b;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+button[data-key="13"] {
+  grid-column: span 2;
+  background-color: rgb(0, 210, 3);
+  font-size: larger;
+  color: white;
 }
